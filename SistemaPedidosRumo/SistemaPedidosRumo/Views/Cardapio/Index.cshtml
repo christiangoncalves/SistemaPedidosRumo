@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SistemaPedidosRumo.Models.Cardapio>
+
+@{
+    ViewData["Title"] = "Cardapio";
+}
+
+<h2>Cardápio</h2>
+
+<p>
+    <a asp-action="Create">Inserir Produto</a> |
+    <a asp-action="Pedido">Pedidos</a>
+</p>
+obs: 0 -> Cozinha / 1 -> Copa
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayName("Local Criacao")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalCriacao)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Deletar", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
