@@ -12,5 +12,7 @@ namespace SistemaPedidosRumo.Models
         public int Id { get; set; }
         public string Mesa { get; set; }
         public string Cliente { get; set; }
+
+        public List<PedidoAuxiliar> pedidoAuxiliar { get; set; }
     }
 }

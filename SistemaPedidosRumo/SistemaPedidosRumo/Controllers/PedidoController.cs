@@ -102,7 +102,17 @@ namespace SistemaPedidosRumo.Controllers
 
         public ActionResult InsertItens(int id)
         {
-            return RedirectToAction("Create", "PedidoAuxiliar", new { parametro = id });
+            return RedirectToAction("Create", "PedidoAuxiliar", new { id = id });
+        }
+
+        public ActionResult Copa()
+        {
+            return RedirectToAction("Copa", "PedidoAuxiliar");
+        }
+
+        public ActionResult Cozinha()
+        {
+            return RedirectToAction("Cozinha", "PedidoAuxiliar");
         }
     }
 }

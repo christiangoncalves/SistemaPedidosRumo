@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<SistemaPedidosRumo.Models.PedidoAuxiliar>
 
 @{
-    ViewData["Title"] = "Inserir item";
+    ViewData["Title"] = "Cozinha";
 }
 
-<h1>Index</h1>
+<h2>Cozinha</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -16,7 +13,7 @@
                 @Html.DisplayName("Numero do Pedido")
             </th>
             <th>
-                @Html.DisplayName("Prato/Bebida")
+                @Html.DisplayName("Prato")
             </th>
             <th>
                 @Html.DisplayName("Quantidade")
@@ -26,12 +23,14 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
+    @if(item.cardapio.LocalCriacao == 0)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.IdPedido)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdCardapio)
+                @Html.DisplayFor(modelItem => item.cardapio.Nome)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Qtde)
@@ -41,6 +40,12 @@
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
+    }
+        
 }
     </tbody>
 </table>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>

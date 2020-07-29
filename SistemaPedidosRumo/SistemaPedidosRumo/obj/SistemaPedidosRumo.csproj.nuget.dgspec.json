@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo.csproj": {}
+    "C:\\Users\\chris\\Source\\Repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo.csproj": {
+    "C:\\Users\\chris\\Source\\Repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo.csproj",
+        "projectUniqueName": "C:\\Users\\chris\\Source\\Repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo.csproj",
         "projectName": "SistemaPedidosRumo",
-        "projectPath": "C:\\Users\\User\\source\\repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\obj\\",
+        "projectPath": "C:\\Users\\chris\\Source\\Repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo.csproj",
+        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chris\\Source\\Repos\\christiangoncalves\\SistemaPedidosRumo\\SistemaPedidosRumo\\SistemaPedidosRumo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

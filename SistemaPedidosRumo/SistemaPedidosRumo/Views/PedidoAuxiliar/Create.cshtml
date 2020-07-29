@@ -1,25 +1,24 @@
 ﻿@model SistemaPedidosRumo.Models.PedidoAuxiliar
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Inserir item";
 }
 
-<h1>Create</h1>
+<h2>Inserir item</h2>
 
-<h4>PedidoAuxiliar</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="IdPedido" class="control-label">Numero do Pedido</label>
-                <input asp-for="IdPedido" value="@ViewBag.idPedido" class="form-control" disabled="disabled"/>
+                <label asp-for="IdPedido" class="control-label">Número do pedido</label>
+                <input asp-for="IdPedido" value="@ViewBag.idPedido" class="form-control" />
                 <span asp-validation-for="IdPedido" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdCardapio" class="control-label">Cardápio</label>
-                <select asp-items="@ViewBag.itensCardapio" class="form-control"></select>
+                <label asp-for="IdCardapio" class="control-label">Cardapio</label>
+                <select asp-for="IdCardapio" asp-items="@ViewBag.itensCardapio" class="form-control"></select>
                 <span asp-validation-for="IdCardapio" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -28,14 +27,14 @@
                 <span asp-validation-for="Qtde" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Inserir" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {

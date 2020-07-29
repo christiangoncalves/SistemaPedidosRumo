@@ -17,7 +17,7 @@ namespace SistemaPedidosRumo.Controllers
         // GET: PedidoAuxiliarController
         public ActionResult Index()
         {
-            return View(db.PedidoAuxiliar.ToList());
+            return RedirectToAction("index", "Pedido");
 
         }
 
@@ -46,7 +46,7 @@ namespace SistemaPedidosRumo.Controllers
                 {
                     db.PedidoAuxiliar.Add(pedidoAuxiliar);
                     db.SaveChanges();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("index", "Pedido");
                 }
 
                 return View(pedidoAuxiliar);
@@ -98,5 +98,27 @@ namespace SistemaPedidosRumo.Controllers
                 return View();
             }
         }
+
+        public ActionResult Copa()
+        {
+            
+            return View(insertCardapio());
+        }
+
+        public ActionResult Cozinha()
+        {
+            return View(insertCardapio());
+        }
+
+        public List<PedidoAuxiliar> insertCardapio()
+        {
+            var pedidoAuxiliar = db.PedidoAuxiliar.ToList();
+            foreach (var item in pedidoAuxiliar)
+            {
+                item.cardapio = db.Cardapio.Find(item.IdCardapio);
+            }
+            return pedidoAuxiliar;
+        }
+
     }
 }
