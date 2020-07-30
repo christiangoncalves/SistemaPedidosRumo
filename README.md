@@ -20,15 +20,15 @@
 **A estrutura do projeto funciona da seguinte maneira:**
 * Página de Cardápio: Nessa pagina é possivel ver os itens no cardápio para que posteriormente esses itens possam ser utilizados nos pedidos.
 
-* Página de Inserção do cardapio: Esta Pagina insere os itens no cardápio.
+* Página de Inserção do Cardápio: Esta página insere os itens no cardápio.
 
-* Página de Pedido: Nessa pagina é possivel ver os pedidos que ja foram criados.
+* Página de Pedido: Nessa página é possivel ver os pedidos que ja foram criados.
 
-* Página de Criação de pedido: Esta pagina cria um novo pedido.
+* Página de Criação de pedido: Esta página cria um novo pedido.
 
-* Página de Inserção de itens ao pedido: esta pagina insere itens já cadastrados no cardápio dentro do pedido.
+* Página de Inserção de itens ao pedido: esta página insere itens já cadastrados no cardápio dentro do pedido.
 
-* Página de Copa/Cozinha: nestas paginas, são possiveis visualizar os itens do cardápio que foram inseridos nos pedidos, as bebidas visiveis na pagina Copa e os pratos na pagina Cozinha.
+* Página de Copa/Cozinha: nestas páginas, serão possíveis visualizar os itens do cardápio que foram inseridos nos pedidos, as bebidas visíveis na pagina Copa e os pratos na página Cozinha.
 
 
 **OBS.: O banco será gerado pelo SQLServer logo ao buildar a aplicação pela primeira vez, dessa forma na primeira execução deve ser inserido os itens no cardápio, para que os mesmos possam ser inseridos posteriormente nos pedidos gerados, sendo necessário também a criação dos pedidos e posteriormente a inserção dos itens do cardápio no pedido.**
