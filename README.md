@@ -5,15 +5,15 @@
 ![img1](https://i.imgur.com/vNOvO36.png)
 
 
-**Logo apos a abertura do projeto no Visual Studio deve se iniciar o Build da Aplicação:**
+**Logo após a abertura do projeto no Visual Studio deve se iniciar o Build da Aplicação:**
 ![img2](https://i.imgur.com/wrrAbWP.jpg)
 
 
-**Com o Build Completo a maioria dos links para navegação se encontrarão logo abaixo do título da pagina**
+**Com o Build Completo a maioria dos links para navegação se encontrarão logo abaixo do título da página**
 ![img3](https://i.imgur.com/Lo3rJjy.jpg)
 
 
-**O unico link que não se encontra logo abaixo ao título se encontra na linha do pedido, logo apos o mesmo ser criado**
+**O único link que não se encontra logo abaixo ao título se encontra na linha do pedido, logo após o mesmo ser criado**
 ![img4](https://i.imgur.com/7tXrNYC.jpg)
 
 
