@@ -36,8 +36,7 @@
                 @Html.DisplayFor(modelItem => item.Qtde)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Deletar", "DeleteCozinha", new { id = item.Id })
             </td>
         </tr>
     }

@@ -57,59 +57,80 @@ namespace SistemaPedidosRumo.Controllers
             }
         }
 
-        // GET: PedidoAuxiliarController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: PedidoAuxiliarController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        // GET: PedidoAuxiliarController/DeleteCozinha/5
+        public ActionResult DeleteCozinha(int id)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var pedido = db.PedidoAuxiliar.Find(id);
+                db.PedidoAuxiliar.Remove(pedido);
+                db.SaveChanges();
+
+                return RedirectToAction(nameof(Cozinha));
             }
             catch
             {
-                return View();
+                return RedirectToAction(nameof(Cozinha));
             }
         }
 
-        // GET: PedidoAuxiliarController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: PedidoAuxiliarController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        // GET: PedidoAuxiliarController/DeleteCopa/5
+        public ActionResult DeleteCopa(int id)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var pedido = db.PedidoAuxiliar.Find(id);
+                db.PedidoAuxiliar.Remove(pedido);
+                db.SaveChanges();
+
+                return RedirectToAction(nameof(Copa));
             }
             catch
             {
-                return View();
+                return RedirectToAction(nameof(Copa));
             }
         }
 
+        // GET: PedidoAuxiliarController/DeletePedido/5
+        /* Obs.: essa Action deleta todos os itens inseridos em um pedido ja deletado no PedidoController,
+           tendo como parametro a id desse pedido */
+        public ActionResult DeletePedido(int id)
+        {
+            try
+            {
+                var pedido = db.PedidoAuxiliar.ToList();
+                foreach (var item in pedido)
+                {
+                    if(item.IdPedido == id)
+                    {
+                        db.PedidoAuxiliar.Remove(item);
+                        db.SaveChanges();
+                    }
+                }
+
+
+                return RedirectToAction("index", "Pedido");
+            }
+            catch
+            {
+                return RedirectToAction("index", "Pedido");
+            }
+        }
+
+        // GET: PedidoAuxiliarController/Copa
         public ActionResult Copa()
         {
             
             return View(insertCardapio());
         }
 
+        // GET: PedidoAuxiliarController/Cozinha
         public ActionResult Cozinha()
         {
             return View(insertCardapio());
         }
 
+        //Metodo para inserir a instancia do item do Cardapio no objeto PedidoAuxiliar
         public List<PedidoAuxiliar> insertCardapio()
         {
             var pedidoAuxiliar = db.PedidoAuxiliar.ToList();

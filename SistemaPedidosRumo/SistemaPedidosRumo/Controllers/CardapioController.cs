@@ -49,45 +49,19 @@ namespace SistemaPedidosRumo.Controllers
             }
         }
 
-        // GET: CardapioController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: CardapioController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
         // GET: CardapioController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
-        }
-
-        // POST: CardapioController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
             try
             {
+                var cardapio = db.Cardapio.Find(id);
+                db.Cardapio.Remove(cardapio);
+                db.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                return RedirectToAction(nameof(Index));
             }
         }
 

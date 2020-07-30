@@ -24,7 +24,7 @@ namespace SistemaPedidosRumo.Controllers
         {
             return View();
         }
-
+        
         // GET: PedidoController/Create
         public ActionResult Create()
         {
@@ -53,62 +53,42 @@ namespace SistemaPedidosRumo.Controllers
             }
         }
 
-        // GET: PedidoController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: PedidoController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
         // GET: PedidoController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
-        }
-
-        // POST: PedidoController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var pedido = db.Pedido.Find(id);
+                db.Pedido.Remove(pedido);
+                db.SaveChanges();
+                return RedirectToAction("DeletePedido", "PedidoAuxiliar", new { id = pedido.Id });
             }
             catch
             {
-                return View();
+                return RedirectToAction(nameof(Index));
             }
         }
 
+        // GET: PedidoController/Cardapio
         public ActionResult Cardapio()
         {
             return RedirectToAction("Index", "Cardapio");
         }
 
+        // GET: PedidoController/InsertItens
         public ActionResult InsertItens(int id)
         {
             return RedirectToAction("Create", "PedidoAuxiliar", new { id = id });
         }
 
+        // GET: PedidoController/Copa
+
         public ActionResult Copa()
         {
             return RedirectToAction("Copa", "PedidoAuxiliar");
         }
+
+        // GET: PedidoController/Cozinha
 
         public ActionResult Cozinha()
         {

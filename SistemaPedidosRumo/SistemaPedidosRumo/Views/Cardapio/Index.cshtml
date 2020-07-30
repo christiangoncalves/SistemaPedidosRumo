@@ -39,8 +39,7 @@ obs: 0 -> Cozinha / 1 -> Copa
                 @Html.DisplayFor(modelItem => item.LocalCriacao)
             </td>
             <td>
-                @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Deletar", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Deletar", "Delete", new {  id=item.Id })
             </td>
         </tr>
 }
